@@ -1,145 +1,166 @@
-<HTML>
-
+<!DOCTYPE html>
+<html>
+<head>
+<title>Name Name</title>
 <style type="text/css">
-
-
+    
+    /* 1. THE BACKGROUND */
     body {
-        background-color: #F5E7C6;
+        background-color: #F5E7C6; 
+        background-image: radial-gradient(rgba(0, 0, 0, 0.2) 1.5px, transparent 1.5px);
+        background-size: 20px 20px;
+        margin: 0;
+        padding: 80px 0; 
         font-family: "Helvetica Neue", sans-serif;
-	line-height: 1.2;
+        line-height: 1.2;
+    }
+
+    /* 2. THE CONTENT CARD */
+    .content-card {
+        background-color: #FDFBF7; 
+        background-image: linear-gradient(to bottom right, rgba(0,0,0,0.005) 0%, rgba(0,0,0,0) 100%);
+        
         width: 800px;
+        max-width: 90%;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 80px;
+        
+        padding: 30px; 
+        
+        box-shadow: 0 1px 15px rgba(0,0,0,0.15), 0 0 3px rgba(0,0,0,0.02);
+        box-sizing: border-box; 
+    }
 
-	background-image: radial-gradient(rgba(0, 0, 0, 0.2) 1.5px, transparent 1.5px);
-    
-	/* Sets the spacing (grid size) to 20px by 20px */
-	background-size: 20px 20px; 
-	
-    	padding: 0px; 
-    	box-sizing: border-box;
-    	box-shadow: 0 0 20px rgba(0,0,0,0.2); 
-    	
-	overflow: auto; 
+    /* --- LAYOUT GRID --- */
+    /* This creates two main columns: Left (Info) and Right (Image) */
+    .top-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start; /* Ensures top alignment */
+        gap: 30px;
+        margin-bottom: 10px;
+    }
+
+    .left-info {
+        flex: 1; /* Takes up all remaining space */
+    }
+
+    /* The image container */
+    .right-photo img {
+        display: block;
+        width: 216px;
+        height: auto;
+        /* Optional: Border to make it look like a printed photo */
+        border: 5px solid white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    }
+
+    /* --- TYPOGRAPHY --- */
+    h1 {
+        font-size: 25pt;
+        margin-top: 0; /* CRITICAL: Ensures text aligns with top of image */
+        margin-bottom: 0.5em;
+        font-weight: normal;
     }
     
+    p {
+        margin-top: 0;
+        text-align: justify;
+    }
+
+    h2 {
+        font-size: 20pt;
+        margin-top: 1.5em;
+        margin-bottom: 0.5em;
+        font-weight: normal;
+        display: inline-block;
+    }
+
     a {
         text-decoration: underline; 
-        line-height: 1em;
-	color: #000000;
-        font-size: 1em;
-    }
-    
-    a:link {
-        text-decoration: underline;
-    }
-    
-    a:visited {
-        text-decoration: underline;
-    }
-    
-    a:active {
-        text-decoration: underline;
+        color: #000000;
     }
     
     a:hover {
         color: #848484;
     }
-    
-    table {
-        margin-left: 15%;
-        margin-right: 15%;
-    }
-    
-    ul {
-        padding-left: 1.6em;
-        list-style-type: square;
-    }
-    
-    
-    ul.list{
-    overflow:hidden; 
-    }
-    
-    li.list{
-    float:left;
-    display:inline;
-    }
-    
-    #double li  { width:50%;} 
-    #triple li  { width:33.333%; }
-    #quad li    { width:25%; }
-    #six li     { width:16.666%; }
-    
-    
+
     ol {
         padding-left: 1.6em;
+        margin-top: 0.5em;
     }
     
-    .column {
-        float: left;
-        width: 30.5%;
-        padding: 5px;
-    }
-    
-    .row {
-        width: 100%; 
-        padding-left: 0.5em;
-        padding-bottom:1em
+    li {
+        margin-bottom: 1em;
     }
 
-    .row::after {
-        content: "";
-        clear: both;
-        display: table;
+    /* --- MOBILE --- */
+    @media (max-width: 650px) {
+        .top-section {
+            flex-direction: column-reverse; /* Image moves to top on phone */
+            align-items: center;
+        }
+        .right-photo img {
+            margin-bottom: 20px;
+        }
     }
-   
-}
+
 </style>
+</head>
 
-<HEAD>
-<TITLE>Vladislav Guskov</TITLE>
-</HEAD>
+<body>
 
-<BODY>
-    
-<div style="font-size:25pt;
-	 text-align:left; 
-	background-color: #FFF6EB; 
-	border:20px solid #FFF6EB">
-
-     Vladislav Guskov <br/>
-
-
-     <div style="font-size:12pt; width:900; height:220; padding-top:.5em; padding-bottom:1em; text-align:justify; column-count: 2;">
-	<p>I am a final year PhD student at the Department of Mathematics, KTH Royal Institute of Technology, my advisor is <a href="https://sites.google.com/view/fredrik-viklund/home">Fredrik Viklund</a>.</p> 
-  	<p>I did my master's studies at the University of Geneva, where I participated in the <a href="https://www.nccr-swissmap.ch/news-and-events/news/welcome-years-master-class-mathematical-physics-students">masterclass</a> in mathematical physics organized by SwissMAP.</p>
-	<p><a href="https://scholar.google.com/citations?user=QwZ2qoUAAAAJ&hl=en&oi=ao">Google Scholar</a>  &nbsp;&nbsp;&nbsp;&nbsp;  <a href="https://sites.google.com/view/kth-rmrg/home">Our group at KTH</a>
-         &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://sites.google.com/view/kth-rmrg/seminar">Seminar</a></p>			
-	<p>You can reach me at vguskov (at) kth (dot) se</p> 
-	<p><img src="profile.png" alt="picture of me"  width="216" height="216" style="padding-left: 45px; padding-top: 0px;"></p>   
-     </div>
-
-      
-     <div style="padding-bottom:.2em; font-size:20pt">
-	Articles <br/>
-     </div> 
+    <div class="content-card">
         
-     <div style="font-size:12pt">
-                <ol>
+        <!-- WRAPPER FOR TOP SECTION -->
+        <div class="top-section">
+            
+            <!-- LEFT COLUMN -->
+            <div class="left-info">
+                <h1>Vladislav Guskov</h1>
+                
+                <p>
+			I am a final year PhD student at the Department of Mathematics, KTH Royal Institute of Technology, my advisor is <a href="https://sites.google.com/view/fredrik-viklund/home">Fredrik Viklund</a>.
+		</p> 
+  		<p>
+			I did my master's studies at the University of Geneva, where I participated in the <a href="https://www.nccr-swissmap.ch/news-and-events/news/welcome-years-master-class-mathematical-physics-students">masterclass</a> in mathematical physics organized by SwissMAP.
+		</p>
+		<p>
+			<a href="https://scholar.google.com/citations?user=QwZ2qoUAAAAJ&hl=en&oi=ao">Google Scholar</a>  &nbsp;&nbsp;&nbsp;&nbsp;  <a href="https://sites.google.com/view/kth-rmrg/home">Our group at KTH</a> &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://sites.google.com/view/kth-rmrg/seminar">Seminar</a>
+		</p>			
+		<p>
+			You can reach me at vguskov (at) kth (dot) se
+		</p> 
+            </div>
+
+            <!-- RIGHT COLUMN -->
+            <div class="right-photo">
+                <img src="profile.png" alt="profile picture">
+            </div>
+            
+        </div>
+        <!-- END TOP SECTION -->
+
+
+        <!-- ARTICLES SECTION -->
+        <h2>Articles</h2>
+        
+        <div style="font-size:12pt">
+            <ol>
                 <li>
-                        <a href="https://arxiv.org/abs/2512.02855">Loewner–Kufarev entropy and large deviations of the Hastings–Levitov model</a> (2025)<br>
+                     <a href="https://arxiv.org/abs/2512.02855">Loewner–Kufarev entropy and large deviations of the Hastings–Levitov model</a> (2025)<br>
 			with Nathanaël Berestycki and Fredrik Viklund <br>
 			arXiv: 2512.02855
                 </li>
-                <br>
+                
                 <li>
-                        <a href="https://afm.journal.fi/article/view/130997/79870">A large deviation principle for the Schramm–Loewner evolution in the uniform topology</a> (2023)
+                    <a href="https://afm.journal.fi/article/view/130997/79870">A large deviation principle for the Schramm–Loewner evolution in the uniform topology</a> (2023)
                         <br>                        			 
 			<em>Annales Fennici Mathematici</em>,<em>&nbsp;48</em>(1), 389&ndash;410.&nbsp;(2023)
                 </li>
-                </ol>
-     </div>
-</div>
-</HTML>
+            </ol>
+        </div>
+
+    </div>
+
+</body>
+</html>
