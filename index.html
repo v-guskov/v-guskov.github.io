@@ -31,6 +31,27 @@
         box-sizing: border-box; 
     }
 
+     /* 3. ANNOUNCEMENT BOX */
+    .announcement-box {
+        background-color: #F5E7C6; 
+        
+        /* Typography */
+        font-size: 0.95em;
+        color: #222;
+        
+        /* Layout */
+        margin-top: 20px;       /* Space between email and note */
+        padding: 12px 15px;     /* Space inside the note */
+        
+        /* Paper Styling */
+        border: 1px solid rgba(0,0,0,0.05); 
+        border-radius: 2px;     /* rounded corners */
+        box-shadow: 0 1px 3px rgba(0,0,0,0.08); 
+        
+        /* Limits width so it doesn't stretch too far if text is short */
+        max-width: 57%; 
+    }
+
     /* --- LAYOUT GRID --- */
     /* This creates two main columns: Left (Info) and Right (Image) */
     .top-section {
@@ -118,18 +139,20 @@
             <div class="left-info">
                 <h1>Vladislav Guskov</h1>
                 
-                <p>
-			I am a final year PhD student at the Department of Mathematics, KTH Royal Institute of Technology, my advisor is <a href="https://sites.google.com/view/fredrik-viklund/home">Fredrik Viklund</a>.
+                <p>I am a final year PhD student at the Department of Mathematics, KTH Royal Institute of Technology, my advisor is <a href="https://sites.google.com/view/fredrik-viklund/home">Fredrik Viklund</a>.
 		</p> 
-  		<p>
-			I did my master's studies at the University of Geneva, where I participated in the <a href="https://www.nccr-swissmap.ch/news-and-events/news/welcome-years-master-class-mathematical-physics-students">masterclass</a> in mathematical physics organized by SwissMAP.
+  		<p>I did my master's studies at the University of Geneva, where I participated in the <a href="https://www.nccr-swissmap.ch/news-and-events/news/welcome-years-master-class-mathematical-physics-students">masterclass</a> in mathematical physics organized by SwissMAP.
 		</p>
-		<p>
-			<a href="https://scholar.google.com/citations?user=QwZ2qoUAAAAJ&hl=en&oi=ao">Google Scholar</a>  &nbsp;&nbsp;&nbsp;&nbsp;  <a href="https://sites.google.com/view/kth-rmrg/home">Our group at KTH</a> &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://sites.google.com/view/kth-rmrg/seminar">Seminar</a>
+		<p><a href="https://scholar.google.com/citations?user=QwZ2qoUAAAAJ&hl=en&oi=ao">Google Scholar</a>  &nbsp;&nbsp;&nbsp;&nbsp;  <a href="https://sites.google.com/view/kth-rmrg/home">Our group at KTH</a> &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://sites.google.com/view/kth-rmrg/seminar">Seminar</a>
 		</p>			
-		<p>
-			You can reach me at vguskov (at) kth (dot) se
+		<p>You can reach me at vguskov (at) kth (dot) se
 		</p> 
+
+		<!-- ANNOUNCEMENT -->
+                <div class="announcement-box">
+                     I will be defending on March 12, 2026. 
+                </div>
+
             </div>
 
             <!-- RIGHT COLUMN -->
